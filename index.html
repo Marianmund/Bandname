@@ -213,6 +213,34 @@ navItems.forEach((nav) => {
 });
 
 
+// Socials Menu
+// Run only on mobile
+if (window.innerWidth <= 768) {
+    const links = document.querySelectorAll('.socials ul li a');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !entry.target.classList.contains('activated')) {
+          const el = entry.target;
+          el.classList.add('activated');
+
+          setTimeout(() => {
+            el.classList.remove('activated');
+          }, 800);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    links.forEach(link => observer.observe(link));
+  }
+
+    links.forEach(link => observer.observe(link));
+  
+
+
+
 
     </script>
 </body>

@@ -639,17 +639,73 @@ section#contact {
     color: var(--color-secondary);
 
 }
+
+
 /* Media Queries */
-
-
 @media screen and (max-width: 768px) {
     .socials ul {
       flex-direction: column;
       align-items: center;
     }
   
-    .socials ul li{
-      margin: 20px 0; /* keep spacing, now vertical */
+    .socials ul li a {
+      margin: 30px 0;
     }
-  }
-  
+    /* Animation on mobile */
+    .socials .facebook.activated {
+        color: #0051ff;
+      }
+    
+      .socials .facebook.activated span {
+        background: #0051ff;
+      }
+    
+      .socials .twitter.activated {
+        color: #1da1f2;
+      }
+    
+      .socials .twitter.activated span {
+        background: #1da1f2;
+      }
+    
+      .socials .instagram.activated {
+        color: #ff16cc;
+      }
+    
+      .socials .instagram.activated span {
+        background: #ff16cc;
+      }
+    
+      .socials .google.activated {
+        color: #ff1e00;
+      }
+    
+      .socials .google.activated span {
+        background: #ff1e00;
+      }
+    
+      .socials ul li a.activated span:nth-child(1) {
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s;
+      }
+    
+      .socials ul li a.activated span:nth-child(2) {
+        transform: scale(1);
+        transform-origin: top;
+        transition: transform 0.5s;
+      }
+    
+      .socials ul li a.activated span:nth-child(3) {
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
+    
+      .socials ul li a.activated span:nth-child(4) {
+        transform: scale(1);
+        transform-origin: bottom;
+        transition: transform 0.5s;
+      }
+    }
+}
