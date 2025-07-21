@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" id="contact-html">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Signup</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    </head>
+<body class="contact-body">
+       <!-- MENU OVERLAY -->
+<div class="overlay overlay-slide-left" id="overlay">
+    <!-- MENU ITEMS -->
+    <nav>
+        <ul>
+          <li id="nav-1" class="slide-out-1 center">
+            <a href="index.html" class="center">Home</a>
+          </li>
+          <li id="nav-2" class="slide-out-2 center">
+            <a href="#music" class="center">Music</a>
+          </li>
+          <li id="nav-3" class="slide-out-3 center">
+            <a href="#live" class="center">Live</a>
+          </li>
+          <li id="nav-4" class="slide-out-4 center">
+            <a href="#merchandise" class="center">Merchandise</a>
+          </li>
+          <li id="nav-5" class="slide-out-5 center">
+            <a href="contact.html" class="center">Contact</a>
+          </li>
+        </ul>
+      </nav>
+  </div>
+  <!-- HAMBURGER MENU -->
+  <div class="hamburger-menu" id="hamburger-menu">
+    <div class="menu-bar1"></div>
+    <div class="menu-bar2"></div>
+    <div class="menu-bar3"></div>
+  </div>
+
+  <!-- SECTIONS -->
+    <div class="background-text">
+        <div class="scroll-line">Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. </div>
+        <div class="scroll-line">Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. </div>
+        <div class="scroll-line">Delete the silence. Delete the silence. Delete the silence. Delete the silence. </div>
+        <div class="scroll-line">Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. </div>
+        <div class="scroll-line">Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. </div>
+        <div class="scroll-line">Delete the silence. Delete the silence. Delete the silence. Delete the silence. </div>
+        <div class="scroll-line">Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. </div>
+        <div class="scroll-line">Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. </div>
+        <div class="scroll-line">Delete the silence. Delete the silence. Delete the silence. Delete the silence. </div>
+        <div class="scroll-line">Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. </div>
+        <div class="scroll-line">Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. </div>
+        <div class="scroll-line">Delete the silence. Delete the silence. Delete the silence. Delete the silence. </div>
+        <div class="scroll-line">Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. </div>
+        <div class="scroll-line">Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. </div>
+        <div class="scroll-line">Delete the silence. Delete the silence. Delete the silence. Delete the silence. </div>
+        <div class="scroll-line">Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. Sign up. </div>
+        <div class="scroll-line">Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. Let it begin. </div>
+        <div class="scroll-line">Delete the silence. Delete the silence. Delete the silence. Delete the silence. </div>
+
+      </div>
+
+    <!-- Contact Form -->
+<center>
+    <div class="contact-form">
+        <form method="POST">
+            <h1 class="form-title2"> Sign Up</h1>
+            <input type="text" class="name" placeholder="Name" requiered>
+            <input type="email" class="email" placeholder="Email adress" requiered>
+            <input type="password" class="password" placeholder="Password" required>
+            <div class="remember-row2">
+              <span class="rememberspan">
+                <input type="checkbox" class="agreetermsofuse" required>
+                <label for="rememberme">I Agree to the terms of use. </label>
+              </span>
+              <span class="rememberspan">
+                <input type="checkbox" class="agreemarketingemails">
+                <label for="rememberme">I want to receive marketing emails. </label>
+              </span>
+            </div>
+            <span class="form-space"></span>
+            <div class="buttons-login">
+                <button type="submit" class="login-primary-btn">Login</button>
+                <span class="login-registerlink"><a href="signup.html"> Already have an account? Login</a></span>
+            </div>
+        </form>
+    </div>
+</center>    
+
+
+
+
+
+ 
+    
+    <script>
+        const hamburgerMenu = document.querySelector("#hamburger-menu");
+const overlay = document.querySelector("#overlay");
+const nav1 = document.querySelector("#nav-1");
+const nav2 = document.querySelector("#nav-2");
+const nav3 = document.querySelector("#nav-3");
+const nav4 = document.querySelector("#nav-4");
+const nav5 = document.querySelector("#nav-5");
+const navItems = [nav1, nav2, nav3, nav4, nav5];
+
+// Control Navigation Animation
+function navAnimation(val1, val2) {
+  navItems.forEach((nav, i) => {
+    nav.classList.replace(`slide-${val1}-${i + 1}`, `slide-${val2}-${i + 1}`);
+  });
+}
+
+function toggleNav() {
+  // Toggle: Hamburger Open/Close
+  hamburgerMenu.classList.toggle("active");
+
+  //   Toggle: Menu Active
+  overlay.classList.toggle("overlay-active");
+
+  if (overlay.classList.contains("overlay-active")) {
+    // Animate In - Overlay
+    overlay.classList.replace("overlay-slide-left", "overlay-slide-right");
+
+    // Animate In - Nav Items
+    navAnimation("out", "in");
+  } else {
+    // Animate Out - Overlay
+    overlay.classList.replace("overlay-slide-right", "overlay-slide-left");
+
+    // Animate Out - Nav Items
+    navAnimation("in", "out");
+  }
+}
+
+// Events Listeners
+hamburgerMenu.addEventListener("click", toggleNav);
+navItems.forEach((nav) => {
+  nav.addEventListener("click", toggleNav);
+});
+
+
+
+  
+    </script>
+</body>
+</html>

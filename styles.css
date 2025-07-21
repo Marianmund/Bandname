@@ -802,7 +802,6 @@ section#Contact {
 
     color: var(--color-secondary);
 
-
 }
 
 form{
@@ -812,7 +811,7 @@ form{
     display: flex;
     flex-direction: column;
 
-
+    width: auto;
 
     padding: 30px;
 
@@ -832,7 +831,11 @@ form{
     padding-bottom: 1%;
 }
 
-.name, .email, .telephone, #message {
+.form-title2 {
+    padding: 7%;
+}
+
+.name, .email, .telephone, #message, .password {
     background: none;
 
     width: 100%;
@@ -849,6 +852,12 @@ form{
     transition: 0.3s;
     
 
+}
+
+input::placeholder, 
+textarea::placeholder {
+    color: white;
+    font-weight: 100;
 }
 
 .form__input,
@@ -896,6 +905,103 @@ input:focus{
     margin: 5px;
 }
 
+
+/* Custom Checkbox */
+.rememberspan input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--color-secondary);
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    background-color: none;
+    vertical-align: middle;
+    margin-right: 8px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .rememberspan input[type="checkbox"]:hover {
+    border-color: #666;
+  }
+  
+  .rememberspan input[type="checkbox"]:checked {
+   background-color: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+  
+  .rememberspan input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    width: 3px;
+    height: 8px;
+    border: solid var(--color-secondary);
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+.rememberspan {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.rememberspan label{
+    padding-left: 0px
+}
+
+.remember-row {
+    margin: 10px;
+    text-transform: none;
+    font-size: 10px;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%
+
+}
+
+.remember-row2 {
+    margin: 10px;
+    margin-top: 15px;
+    text-transform: none;
+    font-size: 10px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+
+    justify-content: space-between;
+    gap: 20px;
+
+    width: 100%
+
+}
+
+
+.remember-row a{
+    text-transform: none;
+}
+
+.remember-row a:hover{
+    text-decoration: underline;
+    color: var(--color-accent)
+}
+
+
+
 /* Buttons Container */
 .contact-form .buttons {
     display: flex;
@@ -907,30 +1013,30 @@ input:focus{
   }
   
 
-/* Each button takes up half the container */
+
 .form-primary-btn,
 .form-secondary-btn {
-  flex: 1;                 /* each takes 50% of .buttons */
-  min-width: 0;            /* prevents overflowing */
+  flex: 1;               
+  min-width: 0;           
   height: 48px;
   padding: 0 16px;
   border-radius: 15px;
   font-size: 15px;
   font-family: inherit;
-  border: 3px solid var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   background: var(--color-primary) !important;
   color: var(--color-secondary) !important;
   transition: 0.3s;
   box-sizing: border-box;
+
 }
 
-
-/* Optional: remove border from secondary */
 .form-secondary-btn {
     border: none;
+    color: var(--color-muted);
 }
 
-/* Hover effects */
+
 .form-primary-btn:hover,
 .form-secondary-btn:hover {
     cursor: pointer;
@@ -938,6 +1044,70 @@ input:focus{
     color: var(--color-primary) !important;
     box-shadow: 0px 4px 6px rgb(255 255 255 / 0.2);
 }
+
+.login-registerlink{
+    font-size: 10px;
+    margin-top: 15px;
+
+    text-transform: none;
+}
+
+.login-registerlink a{
+    text-transform: none;
+}
+
+.login-registerlink a:hover{
+    text-decoration: underline;
+    color: var(--color-accent)
+}
+
+/* Login Buttons */
+
+.buttons-login{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.buttons-login button{
+    margin: 5px;
+}
+
+.login-primary-btn,
+.login-secondary-btn {  
+            
+  width: 100%;         
+  height: 48px;
+  padding: 16px;
+  border-radius: 15px;
+  font-size: 15px;
+  font-family: inherit;
+  border: 1px solid var(--color-secondary);
+  background: var(--color-primary) !important;
+  color: var(--color-secondary) !important;
+  transition: 0.3s;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Optional: remove border from secondary */
+.login-secondary-btn {
+    border: none;
+}
+
+/* Hover effects */
+.login-primary-btn:hover,
+.login-secondary-btn:hover {
+    cursor: pointer;
+    background: var(--color-secondary) !important;
+    color: var(--color-primary) !important;
+    box-shadow: 0px 4px 6px rgb(255 255 255 / 0.2);
+}
+
 
 
 /* Media Queries */
