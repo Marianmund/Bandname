@@ -752,6 +752,8 @@ section#Contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    overflow: hidden;
   }
   
   #contact-html .background-text .scroll-line {
@@ -847,6 +849,17 @@ form{
     transition: 0.3s;
     
 
+}
+
+.form__input,
+.form__textarea {
+  -webkit-appearance: none;
+  border-radius: 0; 
+}
+
+input,
+textarea {
+  font-size: 16px;
 }
 
 
