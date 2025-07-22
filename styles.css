@@ -442,17 +442,14 @@ nav li:hover a {
 
 /* SECTIONS */
 #top-section {
-
-
   width: 100%;
   height: 100vh;
 
   border-bottom: 2px solid var(--color-secondary);
-
 }
 
-.top-image{
-  background: url("Luciddelirium.PNG") no-repeat center center / cover;;
+.top-image {
+  background: url("Luciddelirium.PNG") no-repeat center center / cover;
   background-repeat: none;
   background-position: center;
 
@@ -461,41 +458,40 @@ nav li:hover a {
 }
 
 @media screen and (max-width: 1000px) {
-  #top-section{
+  #top-section {
     height: 70vh;
   }
 }
 
 @media screen and (max-width: 900px) {
-  #top-section{
+  #top-section {
     height: 60vh;
   }
 }
 
 @media screen and (max-width: 850px) {
-  #top-section{
+  #top-section {
     height: 55vh;
   }
 }
 
 @media screen and (max-width: 800px) {
-  #top-section{
+  #top-section {
     height: 50vh;
   }
 }
 
 @media screen and (max-width: 768px) {
-  #top-section{
+  #top-section {
     height: 45vh;
   }
 }
 
 @media screen and (max-width: 700px) {
-  #top-section{
+  #top-section {
     height: 35vh;
   }
 }
-
 
 .section {
   width: 100%;
@@ -521,8 +517,7 @@ nav li:hover a {
   border-top: 2px solid var(--color-secondary);
 }
 
-
-#about{
+#about {
   margin-bottom: 10%;
 }
 
@@ -610,6 +605,10 @@ section#Contact {
   padding-top: 5%;
   padding-bottom: 10%;
   border: 2px solid var(--color-secondary);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .socials h1 {
@@ -638,7 +637,7 @@ section#Contact {
   font-size: 40px;
   text-align: center;
   text-decoration: none;
-  color: #404040;
+  color: var(--color-secondary);
   margin: 0 30px;
   transition: 0.5s;
 }
@@ -646,6 +645,8 @@ section#Contact {
 .socials ul li a span {
   position: absolute;
   transition: transform 0.5s;
+
+
 }
 
 .socials ul li a span:nth-child(1),
@@ -659,6 +660,7 @@ section#Contact {
   top: 0;
   left: 0;
   transform-origin: right;
+
 }
 
 .socials ul li a:hover span:nth-child(1) {
@@ -712,56 +714,123 @@ section#Contact {
   transition: transform 0.5s;
 }
 
-.socials .Instagram:hover {
+/* #### SOCIAL BUTTON COLORS #### */
+
+/* Instagram */
+.socials .Instagram:hover,
+.socials .Instagram.activated {
   color: #e1306c;
 }
-
-.socials .Instagram:hover span {
+.socials .Instagram:hover span,
+.socials .Instagram.activated span {
   background: #e1306c;
 }
 
-.socials .TikTok:hover {
+/* TikTok */
+.socials .TikTok:hover,
+.socials .TikTok.activated {
   color: #69c9d0;
 }
-
-.socials .TikTok:hover span {
+.socials .TikTok:hover span,
+.socials .TikTok.activated span {
   background: #ee1d52;
 }
 
-.socials .Youtube:hover {
+/* YouTube */
+.socials .Youtube:hover,
+.socials .Youtube.activated {
   color: #ff0000;
 }
-
-.socials .Youtube:hover span {
+.socials .Youtube:hover span,
+.socials .Youtube.activated span {
   background: #ff0000;
 }
 
-.socials .Spotify:hover {
-  color: #1db954;
+/* Twitter / X */
+.socials .Twitter:hover,
+.socials .Twitter.activated {
+  color: #1da1f2;
+}
+.socials .Twitter:hover span,
+.socials .Twitter.activated span {
+  background: #1da1f2;
 }
 
-.socials .Spotify:hover:hover span {
+/* Threads */
+.socials .Threads:hover,
+.socials .Threads.activated {
+  color: #000000;
+}
+.socials .Threads:hover span,
+.socials .Threads.activated span {
+  background: #000000;
+}
+
+/* Spotify */
+.socials .Spotify:hover,
+.socials .Spotify.activated {
+  color: #1db954;
+}
+.socials .Spotify:hover span,
+.socials .Spotify.activated span {
   background: #1db954;
 }
 
-.socials ul li a .twitter {
-  color: #1da1f2;
+/* Apple Music */
+.socials .AppleMusic:hover,
+.socials .AppleMusic.activated {
+  color: #fa57c1;
+}
+.socials .AppleMusic:hover span,
+.socials .AppleMusic.activated span {
+  background: #fa57c1;
 }
 
-.socials ul li a:hover:nth-child(3) {
-  color: #c32aa3;
+/* Amazon Music */
+.socials .AmazonMusic:hover,
+.socials .AmazonMusic.activated {
+  color: #ff9900;
+}
+.socials .AmazonMusic:hover span,
+.socials .AmazonMusic.activated span {
+  background: #ff9900;
 }
 
-.socials ul li a:hover:nth-child(4) {
-  color: #dd4b39;
-}
+/* #### TEXT STYLES #### */
 
 .socials h1 {
-  background-color: none !important;
+  background-color: transparent !important;
   color: var(--color-secondary);
 }
 
-/* Media Queries */
+/* #### RESPONSIVE / MOBILE CSS #### */
+@media screen and (max-width: 1100px) {
+  .socials ul {
+    transform: scale(0.9);
+    margin-top: 10px
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .socials ul {
+    margin-top: 5px;
+    transform: scale(0.8);
+  }
+
+  .socials h1{
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+ .socials ul{
+  margin: 0px;
+ }
+
+ 
+}
+
+
 @media screen and (max-width: 768px) {
   .socials {
     padding-top: 13%;
@@ -772,55 +841,24 @@ section#Contact {
     flex-direction: column;
     align-items: center;
     transform: scale(0.7);
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   .socials ul li a {
-    margin: 0px;
+    margin: 0;
   }
 
   .socials h1 {
     width: 100%;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
     margin-top: 10px;
-
     font-size: 400%;
   }
 
-  /* Animation on mobile */
-
-  .socials .Instagram.activated {
-    color: #e1306c;
-  }
-
-  .socials .Instagram.activated span {
-    background: #e1306c;
-  }
-
-  .socials .TikTok.activated {
-    color: #69c9d0;
-  }
-
-  .socials .TikTok.activated span {
-    background: #ee1d52;
-  }
-
-  .socials .Youtube.activated {
-    color: #ff0000;
-  }
-
-  .socials .Youtube.activated span {
-    background: #ff0000;
-  }
-
-  .socials .Spotify.activated {
-    color: #1db954;
-  }
-
-  .socials .Spotify.activated span {
-    background: #1db954;
-  }
+  /* ############################# */
+  /* #### MOBILE ACTIVATIONS #### */
+  /* ############################# */
 
   .socials ul li a.activated span:nth-child(1) {
     transform: scaleX(0);
@@ -1233,11 +1271,10 @@ input:focus {
 @media screen and (max-width: 768px) {
 }
 
-
 /*######### Footer ########*/
 
 .footer-basic {
-  padding:40px 0;
+  padding: 40px 0;
   background-color: var(--color-primary);
   color: var(--color-secondary);
   width: 100%;
@@ -1245,49 +1282,49 @@ input:focus {
 }
 
 .footer-basic ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
 }
 
 .footer-basic li {
-  padding:0 10px;
+  padding: 0 10px;
 }
 
 .footer-basic ul a {
-  color:inherit;
-  text-decoration:none;
+  color: inherit;
+  text-decoration: none;
   opacity: 1;
 }
 
 .footer-basic ul a:hover {
-  opacity:1;
-  color: var(--color-accent)
+  opacity: 1;
+  color: var(--color-accent);
 }
 
-.login-inline a{
+.login-inline a {
   font-size: 100%;
 }
 
 .footer-basic .social {
-  text-align:center;
-  padding-bottom:25px;
+  text-align: center;
+  padding-bottom: 25px;
 }
 
 .footer-basic .social > a {
-  font-size:24px;
-  width:40px;
-  height:40px;
-  line-height:40px;
-  display:inline-block;
-  text-align:center;
-  border-radius:50%;
-  border:1px solid #ccc;
-  margin:0 8px;
-  color:inherit;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
   opacity: 1;
 
   transition: 0.3s;
@@ -1301,11 +1338,9 @@ input:focus {
 }
 
 .footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
-
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }
-
