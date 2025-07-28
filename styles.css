@@ -597,56 +597,56 @@ section#Contact {
 
 /*###### Socials Menu ########*/
 .socials {
-  margin: 30px;
+  margin: 30px auto;
   background: var(--color-primary);
   z-index: 2;
-  padding-left: 100%;
-  padding-right: 100%;
-  padding-top: 5%;
-  padding-bottom: 10%;
-  border: 2px solid var(--color-secondary);
+  padding: 5% 20px 10% 20px;
+  border-top: 2px solid var(--color-secondary);
+  border-bottom: 2px solid var(--color-secondary);
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .socials h1 {
-  margin-bottom: 10%;
+  margin-bottom: 30%;
 }
 
+
 .socials ul {
-  position: relative; /* Or remove entirely if not needed */
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  margin: 0;
   padding: 0;
+  margin: 20px;
+  max-width: 1000px; 
 }
+
 
 .socials ul li {
   list-style: none;
+  flex: 0 1 auto; 
 }
 
 .socials ul li a {
-  display: block;
-  position: relative;
   width: 100px;
   height: 100px;
   line-height: 100px;
   font-size: 40px;
   text-align: center;
-  text-decoration: none;
   color: var(--color-secondary);
-  margin: 0 30px;
+  position: relative;
+  display: block;
   transition: 0.5s;
 }
 
 .socials ul li a span {
   position: absolute;
   transition: transform 0.5s;
-
-
 }
 
 .socials ul li a span:nth-child(1),
@@ -660,7 +660,6 @@ section#Contact {
   top: 0;
   left: 0;
   transform-origin: right;
-
 }
 
 .socials ul li a:hover span:nth-child(1) {
@@ -804,6 +803,8 @@ section#Contact {
 }
 
 /* #### RESPONSIVE / MOBILE CSS #### */
+
+/*
 @media screen and (max-width: 1100px) {
   .socials ul {
     transform: scale(0.9);
@@ -829,19 +830,21 @@ section#Contact {
 
  
 }
-
+*/
 
 @media screen and (max-width: 768px) {
+
   .socials {
     padding-top: 13%;
     padding-bottom: 5%;
   }
 
   .socials ul {
-    flex-direction: column;
-    align-items: center;
-    transform: scale(0.7);
-    margin-top: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    transform: none;
+    gap: 30px;
   }
 
   .socials ul li a {
@@ -850,11 +853,12 @@ section#Contact {
 
   .socials h1 {
     width: 100%;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    margin-top: 10px;
-    font-size: 400%;
+    font-size: 300%;
   }
+
+
+    
+
 
   /* ############################# */
   /* #### MOBILE ACTIVATIONS #### */
@@ -1298,7 +1302,9 @@ input:focus {
   color: inherit;
   text-decoration: none;
   opacity: 1;
+
 }
+
 
 .footer-basic ul a:hover {
   opacity: 1;
@@ -1335,6 +1341,10 @@ input:focus {
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
   transition: 0.3s;
+}
+
+.footer-basic .social a {
+  padding-bottom: 10px;
 }
 
 .footer-basic .copyright {
