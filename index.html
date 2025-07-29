@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bandname</title>
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,30 +11,24 @@
       href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"
       rel="stylesheet"
     />
-
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
     />
-
     <!-- Ionicons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
     />
-
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- FOR EVERY PAGE !!!!!-->
-
     <!-- MENU OVERLAY -->
     <div class="overlay overlay-slide-left" id="overlay">
       <!-- MENU ITEMS -->
@@ -66,12 +59,25 @@
       <div class="menu-bar3"></div>
     </div>
 
-    <!-- till here -->
-
     <!-- SECTIONS -->
 
     <div id="top-section">
       <p class="logo">Bandname</p>
+      <div class="top-overlay">
+        <ul>
+          <li><h2>New Album - Out Now!</h2></li>
+          <li><h1>Lucid Delirium</h1></li>
+          <li class="top-album-button">
+            <button
+              class="primary-btn"
+              onclick="document.getElementById('socials-streaming').scrollIntoView({ behavior: 'smooth', block: 'center' });"
+            >
+              Listen
+            </button>
+            <button class="secondary-btn">Order</button>
+          </li>
+        </ul>
+      </div>
       <div class="top-image"></div>
     </div>
     <br />
@@ -119,6 +125,12 @@
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <h1>...</h1>
+      <br />
+      <br />
+      <button class="primary-btn" id="live-events-see-more">See more</button>
     </div>
 
     <br />
@@ -169,7 +181,7 @@
     </div>
 
     <!-- STREAMING PLATFORMS SECTION -->
-    <div class="socials">
+    <div class="socials" id="socials-streaming">
       <center><h1>Listen On</h1></center>
       <ul>
         <li>
@@ -210,18 +222,20 @@
           <a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
           <a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a>
           <a href="#"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
-          <a href="#"><i class="fa-brands fa-threads" aria-hidden="true"></i></a>
-          <br>
-          <br>
-          <br>
+          <a href="#"
+            ><i class="fa-brands fa-threads" aria-hidden="true"></i
+          ></a>
+          <br />
+          <br />
+          <br />
           <a href="#"><i class="fab fa-spotify" aria-hidden="true"></i></a>
           <a href="#"><i class="fab fa-apple" aria-hidden="true"></i></a>
-          <a href="#"><i class="fab fa-amazon" aria-hidden="true"></i></a>        
+          <a href="#"><i class="fab fa-amazon" aria-hidden="true"></i></a>
         </div>
         <ul class="list-inline">
-          <li class="list-inline-item"><a href="#">Home</a></li>
-          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="index.html">Home</a></li>
           <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="contact.html">Contact</a></li>
           <li class="list-inline-item"><a href="#">Terms</a></li>
           <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
         </ul>
@@ -231,7 +245,7 @@
           <li class="login-inline-item"><a href="login.html">Login</a></li>
           <li class="login-inline-item"><a href="Signup.html">Signup</a></li>
         </ul>
-        <p class="copyright">Company Name © 2018</p>
+        <p class="copyright">Bandname © 2018</p>
         <br />
       </footer>
     </div>

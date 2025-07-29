@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*########## Background Overlay ##########*/
 body::before {
   content: "";
@@ -177,6 +181,27 @@ p {
   transition: 0.3s;
 }
 
+.secondary-btn {
+  width: 100%;
+  border: 0;
+  background: var(--color-primary) !important;
+  color: var(--color-secondary) !important;
+  font-family: inherit;
+  border-radius: 32px;
+  padding: 0 24px;
+  height: 48px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.secondary-btn:hover {
+  cursor: pointer;
+  background: var(--color-secondary) !important;
+  color: var(--color-primary) !important;
+  box-shadow: 0px 4px 6px rgb(255 255 255 / 0.2);
+  transition: 0.3s;
+}
+
 .icon-btn {
   position: absolute;
   top: 16px;
@@ -189,6 +214,12 @@ p {
   height: 48px;
   width: 48px;
   background: rgb(255 255 255 / 10%);
+}
+
+#live-events-see-more {
+  width: 100%;
+  margin: auto;
+  width: 75vw;
 }
 
 @media (width >= 480px) {
@@ -444,8 +475,43 @@ nav li:hover a {
 #top-section {
   width: 100%;
   height: 100vh;
+  position: relative;
 
   border-bottom: 2px solid var(--color-secondary);
+}
+
+.top-overlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  padding: 1rem 0;
+
+  color: var(--color-secondary);
+  z-index: 200;
+}
+
+.top-overlay ul {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+  color: var(--color-secondary);
+
+  line-height: 300%;
+}
+
+.top-overlay h1 {
+  text-transform: uppercase;
+  text-decoration: bold;
+  font-size: 30px;
+  margin-bottom: 0px;
 }
 
 .top-image {
@@ -455,6 +521,19 @@ nav li:hover a {
 
   width: 100%;
   height: 100%;
+}
+
+.top-album-button {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  gap: 5px;
+}
+
+.top-overlay h2 {
+  color: var(--color-secondary);
 }
 
 @media screen and (max-width: 1000px) {
@@ -615,7 +694,6 @@ section#Contact {
   margin-bottom: 30%;
 }
 
-
 .socials ul {
   display: flex;
   flex-wrap: wrap;
@@ -623,13 +701,12 @@ section#Contact {
   gap: 50px;
   padding: 0;
   margin: 20px;
-  max-width: 1000px; 
+  max-width: 1000px;
 }
-
 
 .socials ul li {
   list-style: none;
-  flex: 0 1 auto; 
+  flex: 0 1 auto;
 }
 
 .socials ul li a {
@@ -833,7 +910,6 @@ section#Contact {
 */
 
 @media screen and (max-width: 768px) {
-
   .socials {
     padding-top: 13%;
     padding-bottom: 5%;
@@ -855,10 +931,6 @@ section#Contact {
     width: 100%;
     font-size: 300%;
   }
-
-
-    
-
 
   /* ############################# */
   /* #### MOBILE ACTIVATIONS #### */
@@ -1302,9 +1374,7 @@ input:focus {
   color: inherit;
   text-decoration: none;
   opacity: 1;
-
 }
-
 
 .footer-basic ul a:hover {
   opacity: 1;
