@@ -1,6 +1,5 @@
 # Bandname
 
-
 Bandname/
 │
 ├── backend/
