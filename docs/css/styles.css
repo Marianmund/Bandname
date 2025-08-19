@@ -809,11 +809,11 @@ section#Contact {
 /* TikTok */
 .socials .TikTok:hover,
 .socials .TikTok.activated {
-  color: #69c9d0;
+  color: #000000;
 }
 .socials .TikTok:hover span,
 .socials .TikTok.activated span {
-  background: #ee1d52;
+  background: #000000;
 }
 
 /* YouTube */
@@ -1468,6 +1468,8 @@ input:focus {
   height: 40px;
 
   transition: 0.3s;
+
+  color: var(--color-secondary);
 }
 
 .footer-submit-button {
@@ -1490,14 +1492,14 @@ input:focus {
   margin-left: 0px;
 
   transition: 0.3s;
+
+  color: var(--color-primary);
 }
 
 .footer-submit-button:hover {
   background-color: var(--color-accent);
   border: 2px solid var(--color-accent);
-    box-shadow: 1px 1px 30px var(--color-accent);
-
-
+  box-shadow: 1px 1px 30px var(--color-accent);
 
   transition: 0.3s;
 }
