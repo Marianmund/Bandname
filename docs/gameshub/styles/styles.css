@@ -143,11 +143,17 @@ a:visited {
 
   margin-top: 5%;
   gap: 5px;
-  font-size: 120%;
+  font-size: 100%;
 }
 
 .text {
   margin-bottom: 10px;
+}
+
+@media (min-width: 700px){
+  .top-bar {
+    font-size: 120%;
+  }
 }
 
 /*####### Buttons ########*/
@@ -389,17 +395,17 @@ a:visited {
 }
 
 .rank-number{
-  font-size: 450%;
+  font-size: 430%;
   color: var(--color-accent);
 }
 
 .rank-name{
-  font-size: 200%;
+  font-size: 190%;
   color: var(--color-secondary);
 }
 
 .rank-score {
-  font-size:  150%;
+  font-size:  140%;
   color: var(--color-muted);
 }
 
@@ -410,6 +416,10 @@ a:visited {
 }
 
 @media (max-width: 700px) {
+  .Leaderboard {
+    margin-top: 10%;
+  }
+
   .ranks-list {
     flex-direction: column;
     align-items: center;
@@ -426,9 +436,9 @@ a:visited {
 
   .Leaderboard button {
     margin-top: 5%;
-    width: 50%;
-    height: 80px;
-    font-size: 150%;
+    width: 40%;
+    height: 60px;
+    font-size: 120%;
   }
 }
 
@@ -473,11 +483,15 @@ a:visited {
 }
 
 @media (max-width: 700px){
+    .challenge {
+      margin-top: 10%;
+    }
+
     .challenge button {
     margin-top: 5%;
-    width: 50%;
-    height: 80px;
-    font-size: 150%;
+    width: 40%;
+    height: 60px;
+    font-size: 120%;
   }
 }
 
